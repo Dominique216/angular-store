@@ -43,4 +43,17 @@ export class CartComponent implements OnInit {
 
   }
 
+  addQuantity(item: { quantity: number; }) : number {
+    console.log(item.quantity++)
+     return item.quantity +1
+  } 
+
+  removeQuantity(item: {quantity: number; }) : number {
+    if(item.quantity === 0) {
+      return 0
+    } else {
+      return item.quantity--
+    }
+    
+  }
 }

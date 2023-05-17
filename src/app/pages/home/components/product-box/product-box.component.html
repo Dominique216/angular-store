@@ -12,9 +12,11 @@
                 <p *ngIf="fullWidthMode">Description</p>
             </div>
             <div class="flex justify-between">
-                <span class="text-red-400">{{'150' | currency}}</span>
-                <button>
-                    <mat-icon class="text-gray-500">shopping_cart</mat-icon>
+                <span class="font-extrabold text-lg py-1">{{'150' | currency}}</span>
+                <button
+                (click)="onAddToCart()" 
+                class="px-3 py-1 transition ease-in duration-200 rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">
+                    ADD TO CART                 
                 </button>
             </div>
         </div>
