@@ -7,7 +7,7 @@ const bodyparser = require("body-parser");
 const app = express();
 app.use(express.static("public"));
 app.use(bodyparser.urlencoded({extended: false}));
-app.use(bodyparser.json)
+app.use(bodyparser.json())
 app.use(cors({origin: true, credentials: true}))
 
 const stripe = require("stripe")(process.env.API_KEY)
@@ -24,13 +24,13 @@ app.post("/checkout", async (req, res, next) => {
                     }, 
                     unit_amount: item.price * 100,
                 }, 
-                quanitity: item.quanitity,
+                quantity: item.quantity,
             })), 
             mode:"payment",
             success_url: "http://localhost:4242/success.html", 
             cancel_url: "http://localhost:4242/cancel.html", 
         })
-        res.status(200).json
+        res.status(200).json(session)
     } catch (err) {
         next(err);
     }
