@@ -42,5 +42,6 @@ testem.log
 Thumbs.db
 
 node_modules
-.env
+server/.env
 .DS_Store
+server/node_modules

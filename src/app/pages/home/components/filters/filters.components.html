@@ -1,10 +1,18 @@
-<mat-expansion-panel *ngIf="categories">
+<!-- <mat-expansion-panel *ngIf="categories" class="bg-violet-300">
     <mat-expansion-panel-header>
-        <mat-panel-title>Categories</mat-panel-title>
-    </mat-expansion-panel-header>
-    <mat-selection-list [multiple]="false">
+        <mat-panel-title class="text-violet-700">Categories</mat-panel-title>
+    </mat-expansion-panel-header> -->
+    <!-- <mat-selection-list [multiple]="false">
         <mat-list-option *ngFor="let category of categories" [value]="category">
-            <button (click)="onShowCategory(category)">{{category}}</button>
+            <button (click)="onShowCategory(category)" class="text-violet-700">{{category}}</button>
         </mat-list-option>
-    </mat-selection-list>
-</mat-expansion-panel>
+    </mat-selection-list> -->
+
+<!-- </mat-expansion-panel> -->
+
+<div class="text-violet-700">
+<h1 class="mt-4 bg-violet-300 rounded-md px-5 py-3">Categories</h1>
+    <ul class="mt-4 bg-violet-300 text-center px-5 py-1 rounded-md" *ngFor="let category of categories">
+        <button (click)="onShowCategory(category)"><li>{{category}}</li></button>
+    </ul>
+</div>

@@ -1,4 +1,4 @@
-<mat-card *ngIf="product" [ngClass]="{'text-center' : !fullWidthMode}">
+<mat-card *ngIf="product" [ngClass]="{'text-center' : !fullWidthMode}" class="ml-8">
     <div [ngClass]="{flex: fullWidthMode}">
         <img class="mx-auto mb-1 h-[200px]" 
         [ngClass]="{'h-200px': !fullWidthMode, 'h-[360px]' : fullWidthMode}"
@@ -15,7 +15,7 @@
                 <span class="font-extrabold text-lg py-1">{{ product.price| currency}}</span>
                 <button
                 (click)="onAddToCart()" 
-                class="px-3 py-1 transition ease-in duration-200 rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">
+                class="px-3 py-1 transition ease-in duration-200 rounded-full text-violet-600 border-violet-600 hover:bg-violet-600 hover:text-white border-2 border-violet-800 focus:outline-none">
                     ADD TO CART                 
                 </button>
             </div>
